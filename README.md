@@ -8,6 +8,8 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
+<img src="https://github.com/vikan123/bhaktamer_app/assets/121440762/57ab2d1b-6162-4017-a9bf-9dfa3e58a383" width = "400" height = "800">
+
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
