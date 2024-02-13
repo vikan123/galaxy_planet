@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(
       const Duration(seconds: 3),
-          () => Navigator.pushReplacementNamed(context,'/home'),
+          () => Navigator.of(context).push(_createRoute()),
     );
   }
 
@@ -63,6 +63,23 @@ class _SplashScreenState extends State<SplashScreen> {
         )
       ],
     ));
+  }
+  Route _createRoute(){
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => HomeScreen(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        const curve = Curves.easeInCirc;
+
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
   }
 }
 

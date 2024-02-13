@@ -63,10 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (BuildContext context, int index) {
                             return GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(
-                                      builder: (_) =>
-                                          DetailScreen(planets: controller
-                                              .planet[index])));
+                                  Navigator.of(context).push(_createRoute(index));
                                 },
                                 child: Padding(
                                   padding: const EdgeInsets.all(20),
@@ -110,6 +107,23 @@ class _HomeScreenState extends State<HomeScreen> {
         
 
       ],
+    );
+  }
+  Route _createRoute(int index){
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => DetailScreen(planets: controller.planet[index]),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(0.0, 1.0);
+        const end = Offset.zero;
+        const curve = Curves.ease;
+
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
     );
   }
 }
