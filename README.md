@@ -15,6 +15,8 @@ A few resources to get you started if this is your first Flutter project:
 <img src="https://github.com/vikan123/galaxy_planet/assets/121440762/464b735e-00df-4ada-9223-939b7fb12c33" width = "400" height = "800">
 <img src="https://github.com/vikan123/galaxy_planet/assets/121440762/bd93f973-2f09-4546-bbfe-c2a2406f4ab9" width = "400" height = "800">
 
+https://github.com/vikan123/galaxy_planet/assets/121440762/f5e00724-73b1-4b44-9f41-5c0796a68865
+
 
 
 
